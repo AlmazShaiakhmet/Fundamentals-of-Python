@@ -1,6 +1,6 @@
 # 1. Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
-def func_div():
+def func_div(num_1, num_2):
     """
     Функция деления двух чисел
 
@@ -9,16 +9,12 @@ def func_div():
     num_2 - делитель (ввод пользователя)
 
     """
-
-    num_1 = int(input("Введите первое число: "))
-    num_2 = int(input("Введите второе число: "))
     if num_2 == 0:
-        num_2 = int(input("Вы ввели число '0', введите число не равное '0': "))
-        result_div = num_1 / num_2
-        return result_div
+        return "Вы не можете делить на '0'"
     else:
-        result_div = num_1 / num_2
-        return result_div
+        return num_1 / num_2
 
-result_div = func_div()
-print(f"Результат деления = {result_div}")
+
+num_1 = int(input("Введите первое число: "))
+num_2 = int(input("Введите второе число: "))
+print(func_div(num_1, num_2))

@@ -9,12 +9,14 @@ with open('file_task_03.txt', 'r+') as file:
 print(lst)
 
 print("\nОклад меньше 20000 у сотрудников: ")
-summ = 0
+
+sum = 0
 for i in range(1, len(lst), 2):
     a = int(lst[i])
-    summ += a
+    sum += a
     count = len(lst) / 2
     if a <= 20000:
         print(lst[i-1])
-middle_profit = summ / count
+middle_profit = sum / count
+
 print("\nСредняя величина дохода сотрудников: ", "%.1f" % middle_profit)

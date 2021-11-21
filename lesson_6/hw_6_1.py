@@ -20,7 +20,7 @@ class TrafficLight:
             print("Yellow light")
             time.sleep(2)
             print("Green light")
-            time.sleep(7)
+            time.sleep(9)
 
 
 a = TrafficLight()
